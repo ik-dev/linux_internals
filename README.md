@@ -1,2 +1,3 @@
-# linux_internals
 Linux internals training
+
+Simple examples on LKM(Loadable Kernel Modules)
