@@ -6,7 +6,7 @@ MODULE_LICENSE("Dual BSD/GPL");
 
 // Initializer method
 // Invoked when module is loaded
-static int __init in(void) {
+static int __init initialize(void) {
 	printk(KERN_INFO "Hello world!\n");
 	// Return 0 is must 
 	// else kernel unloads the module
@@ -15,10 +15,10 @@ static int __init in(void) {
 
 // Cleanup method
 // Invoked when module is removed
-static void __exit out(void) {
+static void __exit cleanup(void) {
 	printk(KERN_INFO "Goodbye world!\n");
 }
 
 // Specify the initializer and cleanup methods
-module_init(in);
-module_exit(out);
+module_init(initialize);
+module_exit(cleanup);
