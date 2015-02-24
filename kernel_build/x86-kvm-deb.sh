@@ -5,7 +5,7 @@
 #
 # TODO- setup networking, fs sharing.
 # Author	: Kaiwan NB, kaiwanTECH.
-# Updated by: Ibad Khan
+# Updated	: Ibad Khan
 
 # Config vars
 ROOTFS=./rootfs
@@ -57,7 +57,10 @@ umount ${MNT}
 run()
 {
 # Note- kvm is a wrapper over qemu-system-[x86[_64]] !
-/usr/bin/kvm -kernel ./kernel/linux-3.10.24-x86_64/arch/x86/boot/bzImage -drive file=./wheezy.img,if=virtio -append 'root=/dev/vda console=hvc0' -chardev stdio,id=stdio,mux=on,signal=off -device virtio-serial-pci -device virtconsole,chardev=stdio -mon chardev=stdio -display none
+HYPERVISOR=/usr/bin/kvm
+# In case we are on a VM then QEMU would work fine !
+# HYPERVISOR=/usr/bin/qemu-system-x86_64
+$HYPERVISOR -kernel ./kernel/linux-3.10.24-x86_64/arch/x86/boot/bzImage -drive file=./wheezy.img,if=virtio -append 'root=/dev/vda console=hvc0' -chardev stdio,id=stdio,mux=on,signal=off -device virtio-serial-pci -device virtconsole,chardev=stdio -mon chardev=stdio -display none
 }
 
 
