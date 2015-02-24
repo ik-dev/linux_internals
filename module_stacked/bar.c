@@ -6,16 +6,16 @@ MODULE_LICENSE("Dual BSD/GPL");
 
 // Initializer
 // This calls one of the methods defined under foo.c
-static int __init in(void) {
+static int __init initialize(void) {
 	printk(KERN_INFO "Hello world!\n");
 	foo();
 	return 0;
 }
 
 // Cleanup
-static void __exit out(void) {
+static void __exit cleanup(void) {
 	printk(KERN_INFO "Goodbye world!\n");
 }
 
-module_init(in);
-module_exit(out);
+module_init(initialize);
+module_exit(cleanup);
