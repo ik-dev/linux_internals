@@ -1,3 +1,4 @@
 Linux internals training
 
-Simple examples on LKM(Loadable Kernel Modules)
+> Steps to be followed to build Kernel from source
+> Simple examples on LKM(Loadable Kernel Modules)
