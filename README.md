@@ -11,11 +11,9 @@ Compiling and installing Kernel
 Prerequisite: gcc & libncurses5(Ubuntu)
 
 1. Get the latest Linux Kernel code from http://kernel.org/
-2. Extract the source(.tar.xz or .tar.bz3) file using
-   `tar pxvf source.tar.xz` or `tar jxvf source.tar.bz3`
-3. Configure kernel using
-   `make [x|g|menu]config` or `make [x|g|menu]config ARCH=x86_64`
-   > PS: Architecture specific libraries are must
+2. Extract the source file using `tar pxvf source.tar.xz` or `tar jxvf source.tar.bz3`
+3. Configure kernel using `make [x|g|menu]config` or `make [x|g|menu]config ARCH=x86_64`
+> PS: Architecture specific libraries are must
 4. Compile the kernel using `make`
 5. Compile modules `make modules` and install them `make modules_install`
 6. Install the newly compiled kernel using `make install`
