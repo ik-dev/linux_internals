@@ -8,7 +8,7 @@ Linux Internals Training
 
 Compiling and installing Kernel
 ----------------------------------------------------
-Prerequisite: gcc & libncurses5(Ubuntu)
+Prerequisite: gcc & libncurses5 on Ubuntu 14.10
 
 1. Get the latest Linux Kernel code [here](http://kernel.org/)
 2. Extract the source file using  
@@ -22,12 +22,12 @@ Prerequisite: gcc & libncurses5(Ubuntu)
 7. Create initrd image `cd /boot` and `mkinitramfs -o initfd.img-ver ver`
 8. Update grub using `update-grub`
 
-[SOURCE](http://www.cyberciti.biz/tips/compiling-linux-kernel-26.html)
+[Reference](http://www.cyberciti.biz/tips/compiling-linux-kernel-26.html)
 
 
 Compiling and installing Kernel Module
 ----------------------------------------------------
-Prerequisite: Minimal Kernel source
+Prerequisite: gcc & linux-headers on Ubuntu 14.10
 
   1. Build ko(kernel object) file by running `make`
   2. Load ko file by running `sudo insmod hello.ko`
