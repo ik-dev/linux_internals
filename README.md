@@ -15,18 +15,20 @@ Prerequisite: gcc & libncurses5(Ubuntu)
    `tar pxvf source.tar.xz` or `tar jxvf source.tar.bz3`
 3. Configure kernel using
    `make [x|g|menu]config` or `make [x|g|menu]config ARCH=x86_64`
-   PS: Architecture specific libraries are must
+   > PS: Architecture specific libraries are must
 4. Compile the kernel using `make`
 5. Compile modules `make modules` and install them `make modules_install`
 6. Install the newly compiled kernel using `make install`
 7. Create initrd image `cd /boot` and `mkinitramfs -o initfd.img-ver ver`
 8. Update grub using `update-grub`
-SOURCE: http://www.cyberciti.biz/tips/compiling-linux-kernel-26.html
+
+[SOURCE](http://www.cyberciti.biz/tips/compiling-linux-kernel-26.html)
 
 
 Compiling and installing Kernel Module
 ----------------------------------------------------
-Example for loading kernel module:
+Prerequisite: Minimal Kernel source
+
   1. Build ko(kernel object) file by running `make`
   2. Load ko file by running `sudo insmod hello.ko`
   3. Validate if ko was succesfully loaded by 
