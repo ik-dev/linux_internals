@@ -15,7 +15,7 @@ Prerequisite: gcc & libncurses5(Ubuntu)
    `tar pxvf source.tar.xz` or `tar jxvf source.tar.bz3`
 3. Configure kernel using  
    `make [x|g|menu]config` or `make [x|g|menu]config ARCH=x86_64`  
-   PS: Architecture specific libraries are must
+   Note: Architecture specific libraries are must
 4. Compile the kernel using `make`
 5. Compile modules `make modules` and install them `make modules_install`
 6. Install the newly compiled kernel using `make install`
