@@ -10,7 +10,7 @@ Compiling and installing Kernel
 ----------------------------------------------------
 Prerequisite: gcc & libncurses5(Ubuntu)
 
-1. Get the latest Linux Kernel code from http://kernel.org/
+1. Get the latest Linux Kernel code [here](http://kernel.org/)
 2. Extract the source file using  
    `tar pxvf source.tar.xz` or `tar jxvf source.tar.bz3`
 3. Configure kernel using  
